@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile Explorer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <div class="header-content">
+        <div class="logo">
+          <i class="fab fa-github"></i>
+          <h1>GitHub Profile Explorer</h1>
+        </div>
+        <button id="theme-toggle" class="theme-toggle-btn">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="search-container">
+        <div class="search-box">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="username-input" placeholder="Search GitHub username..." autocomplete="off">
+          <button id="search-button" class="search-btn">
+            <span>Search</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="error-message" class="error-message">
+        <i class="fas fa-exclamation-circle error-icon"></i>
+        <p>User not found. Please try another username.</p>
+      </div>
+
+      <div id="loading-container" class="loading-container">
+        <div class="loading-spinner">
+          <div class="spinner-circle"></div>
+        </div>
+        <p>Fetching GitHub data...</p>
+      </div>
+
+      <div id="profile-section" class="profile-section">
+        <div class="empty-state">
+          <div class="empty-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3>Discover GitHub Profiles</h3>
+          <p>Enter a GitHub username above to view profile details and repositories</p>
+        </div>
+      </div>
+
+      <div id="repos-section" class="repos-section">
+        <!-- Repositories will be inserted here -->
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <p>Made by <i class=></i> Jongkuch Anyar</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
